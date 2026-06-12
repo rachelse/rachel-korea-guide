@@ -14,7 +14,7 @@ export const tips: ContentNote[] = [
   {
     title: 'Use Naver Map or Kakao Map, not Google Maps',
     body:
-      'Locals use Naver Map or Kakao Map for navigation. Google Maps tends to surface only touristic recommendations and has limited walking/transit accuracy in Korea.',
+      'Locals use Naver Map or Kakao Map for navigation. Google Maps tends to surface only touristic recommendations and has limited walking/transit accuracy in Korea. That said, I know Google Maps is hard to avoid as a tourist, so I also saved some local spots to my Google Maps recommendations for you.',
   },
   {
     title: 'Open run (오픈런)',

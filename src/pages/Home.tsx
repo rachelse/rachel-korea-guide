@@ -3,7 +3,7 @@ import SeoulMap from '../components/SeoulMap'
 import { mapLinks } from '../data/maps'
 
 const sections = [
-  { to: '/tips', emoji: '💡', title: 'Local Tips', desc: 'Subway, apps, etiquette, and how to live like a local.' },
+  { to: '/tips', emoji: '💡', title: 'Local Tips', desc: 'Subway, apps, etiquette, and how locals actually get around.' },
   { to: '/food', emoji: '🍜', title: 'Food', desc: 'Unique dishes, seasonal eats, and where locals go.' },
   { to: '/tour', emoji: '⛩️', title: 'Tour', desc: 'Palaces, markets, the Han River, and experiences.' },
   { to: '/shopping', emoji: '🛍️', title: 'Shopping', desc: 'Daiso, Olive Young, and beauty must-buys.' },
