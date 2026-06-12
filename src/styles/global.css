@@ -265,6 +265,29 @@ a {
   font-size: 0.95rem;
 }
 
+.note-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+}
+
+.note-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  transition: background 0.15s ease;
+}
+
+.note-link:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
 /* ---------- District / city lists ---------- */
 .district-list {
   display: flex;

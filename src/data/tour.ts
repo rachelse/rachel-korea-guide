@@ -48,16 +48,17 @@ export const tourGroups: ContentGroup[] = [
   {
     heading: 'Experiences',
     items: [
-      {
-        title: 'Dermatology clinics',
-        body: "Korea's new visitor record was partly driven by skincare and derma tourism. Ask me for details if you are interested.",
-      },
+
       {
         title: 'Jjimjilbang (찜질방)',
         body: 'Korean sauna with lots of entertainment (PC room, gaming, comic books). Eat sikhye (식혜) and roasted eggs with cider (Sprite).',
       },
-      { title: 'PC방 & 노래방', body: 'Internet cafes and karaoke rooms — staples of Korean leisure.' },
-      { title: 'Gentle Monster cafe (젠틀몬스터카페)', body: 'Avant-garde eyewear brand with surreal flagship cafes (Nudake).' },
+      { title: '노래방 (Noraebang)', body: 'Karaoke rooms, a must-try night out. Look for a 코인노래방 (coin karaoke): you pay per song (or a few songs for ₩1,000) instead of renting a whole room by the hour, so it is perfect for solo singers or a quick session with friends.' },
+      { title: 'PC방 (PC bang)', body: 'Internet cafes packed with high-spec gaming PCs — a staple of Korean leisure. Cheap by the hour, and many serve surprisingly good food (ramyeon, fried snacks) right to your seat.' },
+      {
+        title: 'Dermatology clinics',
+        body: "Korea's new visitor record was partly driven by skincare and derma tourism. Ask me for details if you are interested.",
+      }, 
       { title: 'Korean medicine clinic (한의원)', body: 'Try traditional Korean medicine and acupuncture.' },
     ],
   },

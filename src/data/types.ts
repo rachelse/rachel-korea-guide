@@ -5,6 +5,8 @@ export interface ContentNote {
   title: string
   /** Optional longer description. Supports plain text. */
   body?: string
+  /** Optional external links (Instagram, app, YouTube, etc.). */
+  links?: { label: string; url: string }[]
 }
 
 export interface ContentGroup {

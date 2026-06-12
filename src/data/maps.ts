@@ -27,6 +27,12 @@ export const mapLinks: MapLink[] = [
     note: 'Authentic spots on my to-go list, trusted picks from friends, and places hyped among locals.',
   },
   {
+    label: 'Tour',
+    url: 'https://maps.app.goo.gl/AwjDMaFLEfj9WFPR7',
+    count: 54,
+    note: 'A collection of touristic places worth visiting.',
+  },
+  {
     label: 'Cafes',
     url: 'https://maps.app.goo.gl/YNCdhrTsEjwZGFNQ6',
     count: 43,
@@ -37,12 +43,6 @@ export const mapLinks: MapLink[] = [
     url: 'https://maps.app.goo.gl/u5DKncgQknbBH3Te8',
     count: 18,
     note: 'Bars and Korean-style pocha for a night out.',
-  },
-  {
-    label: 'Tour',
-    url: 'https://maps.app.goo.gl/AwjDMaFLEfj9WFPR7',
-    count: 54,
-    note: 'A collection of touristic places worth visiting.',
   },
   {
     label: 'Entertainment',

@@ -42,11 +42,6 @@ export const foodGroups: ContentGroup[] = [
     ],
   },
   {
-    heading: 'Pocha (Korean bars)',
-    intro: 'Maybe not your type — but very local.',
-    items: [{ title: '하얀집', body: 'A pocha worth a visit.' }],
-  },
-  {
     heading: 'Seasonal foods',
     items: [
       { title: 'Rainy day: 파전 + 막걸리', body: 'Savory scallion pancake with rice wine — the classic monsoon combo.' },
@@ -63,8 +58,29 @@ export const foodGroups: ContentGroup[] = [
   {
     heading: 'Food guides & maps',
     items: [
-      { title: '푸딘코 & Blue Ribbon', body: 'Trusted curation apps/guides for finding good restaurants.' },
-      { title: '성시경 먹을텐데 & 최자로드', body: 'Popular celebrity food shows whose recommendations locals follow.' },
+      {
+        title: '푸딘코 (Foodinco)',
+        body:
+          'A trusted crowd-curated restaurant guide. It has its own app, and you can also browse picks and updates on their Instagram — though it probably only supports Korean.',
+        links: [{ label: 'Instagram', url: 'https://www.instagram.com/foodinco_/' }],
+      },
+      {
+        title: '블루리본 (Blue Ribbon Survey)',
+        body:
+          "Korea's long-running fine-dining and restaurant rating guide (think Michelin-style ribbons). Great for special meals.",
+      },
+      {
+        title: '성시경 먹을텐데',
+        body:
+          "Singer Sung Si-kyung's hugely popular YouTube food series. Locals genuinely seek out the restaurants he features.",
+        links: [{ label: 'YouTube', url: 'https://www.youtube.com/@sungsikyung' }],
+      },
+      {
+        title: '최자로드',
+        body:
+          "Rapper Choiza's food-trip YouTube series, beloved for honest, down-to-earth local recommendations.",
+        links: [{ label: 'YouTube', url: 'https://www.youtube.com/@choizaroad' }],
+      },
     ],
   },
 ]
