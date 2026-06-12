@@ -1,0 +1,280 @@
+.seoul-map {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #f4f8ef;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(31, 64, 32, 0.12);
+  border: 1px solid var(--border);
+  /* Allow popups to extend beyond the map edges. */
+  overflow: visible;
+}
+
+.seoul-map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+/* ---------- Gu shapes (background) ---------- */
+.gu-shape {
+  fill: #dfe9d6;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+  cursor: pointer;
+  transition: fill 0.15s ease;
+  outline: none;
+}
+
+.gu-shape:hover,
+.gu-shape:focus-visible,
+.gu-shape.active {
+  fill: #c4d9b6;
+}
+
+/* ---------- Gu hover tooltip ---------- */
+.gu-tooltip-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* Keep district notes above the pin layer below. */
+  z-index: 40;
+}
+
+.gu-tooltip-anchor {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.gu-tooltip {
+  position: absolute;
+  width: 220px;
+  max-width: 70vw;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  box-shadow: 0 10px 30px rgba(31, 64, 32, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  pointer-events: none;
+  z-index: 25;
+}
+
+.gu-tooltip.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.gu-tooltip.above {
+  bottom: calc(100% + 8px);
+}
+
+.gu-tooltip.below {
+  top: calc(100% + 8px);
+}
+
+.gu-tooltip.center {
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+}
+
+.gu-tooltip.center.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+.gu-tooltip.left {
+  left: 0;
+}
+
+.gu-tooltip.right {
+  right: 0;
+}
+
+.gu-tooltip-korean {
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin: 0 0 0.1rem;
+}
+
+.gu-tooltip-title {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+}
+
+.gu-tooltip-desc {
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+/* ---------- English district labels ---------- */
+.gu-label {
+  font-size: 13px;
+  font-family: var(--font-body);
+  fill: #5a6b53;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ---------- Pin overlay ---------- */
+.pin-layer {
+  position: absolute;
+  inset: 0;
+  /* Let hover pass through to the gu shapes; pins re-enable events below. */
+  pointer-events: none;
+  /* Sits below the district tooltip layer. */
+  z-index: 10;
+}
+
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.pin-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  font-family: var(--font-body);
+}
+
+.pin-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.map-pin:hover .pin-dot,
+.pin-button:focus-visible .pin-dot,
+.map-pin.active .pin-dot {
+  background: var(--accent-dark);
+  transform: scale(1.35);
+}
+
+.pin-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1px 6px;
+  border-radius: 999px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  /* Hidden by default to reduce clutter; revealed on hover/focus. */
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.map-pin:hover .pin-label,
+.pin-button:focus-visible .pin-label,
+.map-pin.active .pin-label {
+  opacity: 1;
+}
+
+.map-pin.active {
+  z-index: 20;
+}
+
+/* ---------- Hover popup ---------- */
+.pin-popup {
+  position: absolute;
+  width: 240px;
+  max-width: 70vw;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 10px 30px rgba(31, 64, 32, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.pin-popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.pin-popup.above {
+  bottom: calc(100% + 8px);
+}
+
+.pin-popup.below {
+  top: calc(100% + 8px);
+}
+
+.pin-popup.center {
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+}
+
+.pin-popup.center.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+.pin-popup.left {
+  left: 0;
+}
+
+.pin-popup.right {
+  right: 0;
+}
+
+.popup-korean {
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin: 0 0 0.15rem;
+}
+
+.popup-title {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+}
+
+.popup-desc {
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .gu-label {
+    font-size: 16px;
+  }
+
+  .pin-label {
+    font-size: 0.6rem;
+    padding: 1px 4px;
+  }
+
+  .pin-popup {
+    width: 200px;
+  }
+}
