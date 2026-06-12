@@ -5,8 +5,7 @@ import { mapLinks } from '../data/maps'
 const sections = [
   { to: '/tips', emoji: '💡', title: 'Local Tips', desc: 'Subway, apps, etiquette, and how locals actually get around.' },
   { to: '/food', emoji: '🍜', title: 'Food', desc: 'Unique dishes, seasonal eats, and where locals go.' },
-  { to: '/tour', emoji: '⛩️', title: 'Tour', desc: 'Palaces, markets, the Han River, and experiences.' },
-  { to: '/shopping', emoji: '🛍️', title: 'Shopping', desc: 'Daiso, Olive Young, and beauty must-buys.' },
+  { to: '/tour', emoji: '⛩️', title: 'Tour', desc: 'Palaces, markets, the Han River, experiences, and shopping.' },
   { to: '/cities', emoji: '🚄', title: 'Other Cities', desc: 'Beyond Seoul: Jeju, Busan, Gyeongju, and more.' },
 ]
 
@@ -49,7 +48,6 @@ export default function Home() {
               <span className="map-link-body">
                 <span className="map-link-label">
                   {m.label}
-                  {m.count != null && <span className="map-link-count"> · {m.count} places</span>}
                 </span>
                 {m.note && <span className="map-link-note">{m.note}</span>}
               </span>

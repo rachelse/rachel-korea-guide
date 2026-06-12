@@ -7,7 +7,7 @@ export default function Tour() {
     <div className="page">
       <PageHeader
         title="Tour"
-        subtitle="Palaces, markets, the Han River, and uniquely Korean experiences."
+        subtitle="Palaces, markets, the Han River, uniquely Korean experiences, and where to shop."
       />
       {tourGroups.map((group) => (
         <section key={group.heading} className="content-group">

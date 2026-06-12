@@ -6,7 +6,6 @@ const links = [
   { to: '/tips', label: 'Tips' },
   { to: '/food', label: 'Food' },
   { to: '/tour', label: 'Tour' },
-  { to: '/shopping', label: 'Shopping' },
   { to: '/cities', label: 'Other Cities' },
 ]
 
