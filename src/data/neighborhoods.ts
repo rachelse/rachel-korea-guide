@@ -9,6 +9,14 @@ export interface Neighborhood {
   /** Real-world location used to place the pin on the gu map. */
   lon: number
   lat: number
+  /**
+   * Optional visual nudge (in percentage points of the map width/height)
+   * applied AFTER projecting lon/lat. Used to fan out pins that sit almost
+   * on top of each other so they stay tappable on small screens. Does not
+   * change the stored real-world coordinates above.
+   */
+  nudgeX?: number
+  nudgeY?: number
 }
 
 // Approximate centers of each recommended neighborhood (lon, lat).
@@ -21,6 +29,8 @@ export const neighborhoods: Neighborhood[] = [
       'Youthful and energetic, centered on Hongik University. Packed with indie cafes, live music, street performances, and nightlife. Crowded but iconic.',
     lon: 126.9233,
     lat: 37.5563,
+    nudgeX: 1.5,
+    nudgeY: 0,
   },
   {
     id: 'hapjeong',
@@ -30,6 +40,8 @@ export const neighborhoods: Neighborhood[] = [
       'Right next to Hongdae but a touch calmer. Riverside cafes, bookstores, and the Mecenatpolis mall, with easy access toward the Han River.',
     lon: 126.9137,
     lat: 37.5495,
+    nudgeX: -1.5,
+    nudgeY: 3,
   },
   {
     id: 'yeonnam',
@@ -39,6 +51,8 @@ export const neighborhoods: Neighborhood[] = [
       'A relaxed, leafy neighborhood along the Gyeongui Line Forest Park ("Yeontral Park"). Cozy brunch spots, dessert cafes, and a laid-back local vibe.',
     lon: 126.9255,
     lat: 37.5605,
+    nudgeX: 3.5,
+    nudgeY: -4,
   },
   {
     id: 'mangwon',
@@ -48,6 +62,8 @@ export const neighborhoods: Neighborhood[] = [
       'Quiet and homey with the beloved Mangwon Market, affordable eats, and Mangwon Hangang Park by the river. A favorite for slow, everyday Seoul.',
     lon: 126.9019,
     lat: 37.5556,
+    nudgeX: -3.5,
+    nudgeY: 0,
   },
   {
     id: 'seongsu',
@@ -84,6 +100,8 @@ export const neighborhoods: Neighborhood[] = [
       'The classic tourist shopping street: cosmetics, street food, and brand stores. Busy and very tourist-oriented, but iconic for a first visit.',
     lon: 126.9849,
     lat: 37.5636,
+    nudgeX: 0.5,
+    nudgeY: 2.5,
   },
   {
     id: 'gangnam',
@@ -120,6 +138,8 @@ export const neighborhoods: Neighborhood[] = [
       'One of the best areas to feel the mixture of past and present. Old printing alleys and hardware shops now sit alongside hip retro bars and cafes ("Hipjiro").',
     lon: 126.9915,
     lat: 37.5664,
+    nudgeX: 1,
+    nudgeY: -1,
   },
   {
     id: 'bukchon',
@@ -138,6 +158,8 @@ export const neighborhoods: Neighborhood[] = [
       'The most international neighborhood in Seoul: diverse global food, bars, and crowds from all over the world. Lively, eclectic, and great for a night out.',
     lon: 126.9945,
     lat: 37.5345,
+    nudgeX: 0,
+    nudgeY: 2,
   },
   {
     id: 'hannam',
@@ -147,6 +169,8 @@ export const neighborhoods: Neighborhood[] = [
       'Refined and design-focused, just east of Itaewon. Home to the Leeum Museum, upscale boutiques, embassies, and stylish cafes and restaurants.',
     lon: 127.0017,
     lat: 37.5345,
+    nudgeX: 3,
+    nudgeY: 1.5,
   },
   {
     id: 'haebangchon',
@@ -156,6 +180,8 @@ export const neighborhoods: Neighborhood[] = [
       'A hillside neighborhood (HBC) just below Namsan with sweeping views, a creative expat scene, indie cafes, and a relaxed, bohemian atmosphere.',
     lon: 126.9866,
     lat: 37.5418,
+    nudgeX: -2.5,
+    nudgeY: -2,
   },
   {
     id: 'jamsil',

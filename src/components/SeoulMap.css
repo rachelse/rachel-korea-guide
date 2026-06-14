@@ -143,15 +143,18 @@
 }
 
 .pin-button {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  /* Slightly enlarged, mostly-transparent tap area so fingers can hit the small dot. */
+  padding: 7px;
+  margin: -7px;
   font-family: var(--font-body);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .pin-dot {
@@ -164,7 +167,6 @@
   transition: transform 0.15s ease, background 0.15s ease;
 }
 
-.map-pin:hover .pin-dot,
 .pin-button:focus-visible .pin-dot,
 .map-pin.active .pin-dot {
   background: var(--accent-dark);
@@ -172,6 +174,12 @@
 }
 
 .pin-label {
+  /* Absolutely positioned so the hidden label does not enlarge the pin's
+     hover/tap area; it floats just below the dot only when revealed. */
+  position: absolute;
+  top: calc(100% - 4px);
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 0.68rem;
   font-weight: 600;
   color: var(--ink);
@@ -186,14 +194,22 @@
   transition: opacity 0.15s ease;
 }
 
-.map-pin:hover .pin-label,
 .pin-button:focus-visible .pin-label,
 .map-pin.active .pin-label {
   opacity: 1;
 }
 
-.map-pin.active {
-  z-index: 20;
+/* ---------- Pin popup layer (sits above all pins) ---------- */
+.pin-popup-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 35;
+}
+
+.pin-popup-anchor {
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 /* ---------- Hover popup ---------- */
@@ -267,6 +283,17 @@
 @media (max-width: 760px) {
   .gu-label {
     font-size: 16px;
+  }
+
+  .pin-dot {
+    width: 16px;
+    height: 16px;
+  }
+
+  .pin-button {
+    /* Slightly larger tap area on touch screens. */
+    padding: 9px;
+    margin: -9px;
   }
 
   .pin-label {

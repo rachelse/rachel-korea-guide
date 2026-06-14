@@ -10,8 +10,8 @@ const pins = neighborhoods.map((n) => {
   const { x, y } = projectLonLat(n.lon, n.lat)
   return {
     ...n,
-    xPct: (x / GU_VIEWBOX.width) * 100,
-    yPct: (y / GU_VIEWBOX.height) * 100,
+    xPct: (x / GU_VIEWBOX.width) * 100 + (n.nudgeX ?? 0),
+    yPct: (y / GU_VIEWBOX.height) * 100 + (n.nudgeY ?? 0),
   }
 })
 
@@ -90,8 +90,6 @@ export default function SeoulMap() {
       <div className="pin-layer">
         {pins.map((p) => {
           const isActive = activeId === p.id
-          const placement = p.yPct < 32 ? 'below' : 'above'
-          const align = p.xPct < 24 ? 'left' : p.xPct > 76 ? 'right' : 'center'
 
           return (
             <div
@@ -112,7 +110,25 @@ export default function SeoulMap() {
                 <span className="pin-dot" />
                 <span className="pin-label">{p.name}</span>
               </button>
+            </div>
+          )
+        })}
+      </div>
 
+      {/* Pin popups live in their own top layer so an open popup never has to
+          raise its pin above neighbors (which would block hovering them). */}
+      <div className="pin-popup-layer">
+        {pins.map((p) => {
+          const isActive = activeId === p.id
+          const placement = p.yPct < 32 ? 'below' : 'above'
+          const align = p.xPct < 24 ? 'left' : p.xPct > 76 ? 'right' : 'center'
+
+          return (
+            <div
+              key={`${p.id}-popup`}
+              className="pin-popup-anchor"
+              style={{ left: `${p.xPct}%`, top: `${p.yPct}%` }}
+            >
               <div className={`pin-popup ${placement} ${align} ${isActive ? 'show' : ''}`} role="tooltip">
                 <p className="popup-korean">{p.koreanName}</p>
                 <h4 className="popup-title">{p.name}</h4>
