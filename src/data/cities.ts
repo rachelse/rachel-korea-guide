@@ -32,7 +32,23 @@ export const cities: City[] = [
     koreanName: '대구',
     lon: 128.6014,
     lat: 35.8714,
-    description: 'My hometown, haha :)',
+    description: 'My hometown, haha :) Famous for its brutally hot weather — so we have all the technology to beat the heat.',
+    highlights: [
+      { title: 'Food', body: '막창 (makchang, grilled beef/pork intestines), 납작만두 (napjak-mandu, flat fried dumplings), 뭉티기 (mungtigi, fresh raw beef chunks), and 야끼우동 (yaki-udong, spicy stir-fried udong).' },
+    ],
+  },
+  {
+    id: 'suwon',
+    name: 'Suwon',
+    koreanName: '수원',
+    lon: 127.0286,
+    lat: 37.2636,
+    description: 'A city just south of Seoul, easy to reach as a day trip.',
+    highlights: [
+      { title: 'Hwaseong Fortress (수원화성)', body: 'A UNESCO World Heritage fortress wall from the Joseon dynasty. You can walk the ramparts and ride a trolley around the grounds.' },
+      { title: 'Haenggung-dong (행궁동)', body: 'A charming neighborhood by the fortress palace, full of cafes, murals, and old-meets-new alleys.' },
+      { title: 'Byeolmadang Library (별마당도서관)', body: 'The soaring open library inside the newly opened Starfield Suwon.' },
+    ],
   },
   {
     id: 'gyeongju',
