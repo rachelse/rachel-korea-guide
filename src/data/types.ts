@@ -40,4 +40,7 @@ export interface City {
   koreanName?: string
   description: string
   highlights?: ContentNote[]
+  /** Approximate map coordinates for the Korea map pin. */
+  lon?: number
+  lat?: number
 }

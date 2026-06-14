@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import SeoulMap from '../components/SeoulMap'
+import KoreaMap from '../components/KoreaMap'
 import { mapLinks } from '../data/maps'
 
 const sections = [
   { to: '/tips', emoji: '💡', title: 'Local Tips', desc: 'Subway, apps, etiquette, and how locals actually get around.' },
   { to: '/food', emoji: '🍜', title: 'Food', desc: 'Unique dishes, seasonal eats, and where locals go.' },
   { to: '/tour', emoji: '⛩️', title: 'Tour', desc: 'Palaces, markets, the Han River, experiences, and shopping.' },
-  { to: '/cities', emoji: '🚄', title: 'Other Cities', desc: 'Beyond Seoul: Jeju, Busan, Gyeongju, and more.' },
 ]
 
 export default function Home() {
@@ -24,8 +24,10 @@ export default function Home() {
         <h2 className="section-heading">Seoul at a glance</h2>
         <p className="section-intro map-intro">
           Seoul is divided into 25 districts (구, <em>gu</em>).
-          <br/>
-          Hover over a district to read about it, or hover a pin for my notes on the trendy neighborhoods.
+          Hover over a district or trendy neighborhood to read my notes on it.<br/>
+          What makes Seoul special is how it layers Korean history — from the Joseon dynasty to its post-war rebuilding to its rapid modern growth.<br/>
+          North of han river (<em>Gangbuk</em>) has the oldest, most traditional areas, while south (<em>Gangnam</em>) is modern and fast-moving. <br/>
+          Each district has its own vibe and attractions, so explore based on your interests!
         </p>
         <SeoulMap />
       </section>
@@ -70,6 +72,15 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className="map-section">
+        <h2 className="section-heading">Beyond Seoul</h2>
+        <p className="section-intro map-intro">
+          When you have time beyond the capital, here is where to go.
+          Hover over (or tap) a city to read my notes on it.
+        </p>
+        <KoreaMap />
       </section>
     </div>
   )

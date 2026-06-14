@@ -42,7 +42,7 @@ export const mapLinks: MapLink[] = [
     url: 'https://maps.app.goo.gl/RCzCCUjGJb1FwLVa7',
     note: 'Fun things to do around the city.',
   },
-    {
+  {
     label: 'digital nomad cafes',
     url: 'https://maps.app.goo.gl/nCuBGVJcQH2czvKt6',
     note: 'Laptop-friendly cafes to work or study.',

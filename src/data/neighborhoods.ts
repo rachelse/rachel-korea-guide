@@ -26,7 +26,7 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Hongdae',
     koreanName: '홍대',
     description:
-      'Youthful and energetic, centered on Hongik University. Packed with indie cafes, live music, street performances, and nightlife. Crowded but iconic.',
+      'Youthful and energetic, centered on Hongik University. Packed with indie cafes, live music, street performances, and clubs. Crowded but iconic.',
     lon: 126.9233,
     lat: 37.5563,
     nudgeX: 1.5,
@@ -37,7 +37,7 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Hapjeong',
     koreanName: '합정',
     description:
-      'Right next to Hongdae but a touch calmer. Riverside cafes, bookstores, and the Mecenatpolis mall, with easy access toward the Han River.',
+      'Right next to Hongdae but a touch calmer. Riverside cafes, bookstores, and good Japanese restaurants.',
     lon: 126.9137,
     lat: 37.5495,
     nudgeX: -1.5,
@@ -48,7 +48,7 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Yeonnam',
     koreanName: '연남',
     description:
-      'A relaxed, leafy neighborhood along the Gyeongui Line Forest Park ("Yeontral Park"). Cozy brunch spots, dessert cafes, and a laid-back local vibe.',
+      'A leafy neighborhood along the Gyeongui Line Forest Park ("Yeontral Park"). Cozy brunch spots, dessert cafes, and lots of hyped places — a popular date spot, so expect crowds.',
     lon: 126.9255,
     lat: 37.5605,
     nudgeX: 3.5,
@@ -59,7 +59,7 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Mangwon',
     koreanName: '망원',
     description:
-      'Quiet and homey with the beloved Mangwon Market, affordable eats, and Mangwon Hangang Park by the river. A favorite for slow, everyday Seoul.',
+      'Quiet and homey with the beloved Mangwon Market, affordable eats, good dessert cafes, and Mangwon Hangang Park by the river. One of my favorite local neighborhoods.',
     lon: 126.9019,
     lat: 37.5556,
     nudgeX: -3.5,
@@ -70,7 +70,11 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Seongsu / Ttukseom',
     koreanName: '성수/뚝섬',
     description:
-      'A former industrial district turned trendiest neighborhood in Seoul. Converted warehouses now hold concept stores, flagship pop-ups, specialty coffee, and design studios. Near the Han River at Ttukseom.',
+      'A former industrial district turned trendiest neighborhood in Seoul. ' +
+      'Converted warehouses now hold concept stores, flagship pop-ups, specialty coffee, and design studios, ' +
+      'plus SM Town and a flagship Olive Young.' +
+      'Near the Han River at Ttukseom. ' +
+      'Bustling any day of the week, and especially popular with Japanese visitors due to K-pop and cafes.',
     lon: 127.0557,
     lat: 37.5445,
   },
@@ -79,7 +83,7 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Apgujeong Rodeo',
     koreanName: '압구정로데오',
     description:
-      'Upscale and fashion-forward. High-end boutiques, dessert cafes, and Gangnam-style glamour. A hub for beauty clinics and luxury shopping.',
+      'Upscale and fashion-forward. High-end boutiques, dessert cafes, and Gangnam-style glamour. A hub for beauty clinics and luxury shopping, Ferrari moves slower than humans here.',
     lon: 127.0286,
     lat: 37.5274,
   },
@@ -88,7 +92,7 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Yongsan / Samgakji',
     koreanName: '용산/삼각지',
     description:
-      'Home to the National Museum of Korea and the redeveloped Yongsan area. Samgakji has a quietly growing food scene worth exploring.',
+      'Home to the National Museum of Korea and the redeveloped Yongsan area. Samgakji has a fast-growing food scene and is now one of the most hyped neighborhoods among Koreans.',
     lon: 126.9723,
     lat: 37.5347,
   },
@@ -97,7 +101,7 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Myeongdong',
     koreanName: '명동',
     description:
-      'The classic tourist shopping street: cosmetics, street food, and brand stores. Busy and very tourist-oriented, but iconic for a first visit.',
+      'The classic tourist shopping street: cosmetics, street food, and brand stores. Busy and very tourist-oriented, but good Chinese restaurants.',
     lon: 126.9849,
     lat: 37.5636,
     nudgeX: 0.5,
@@ -108,7 +112,7 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Gangnam',
     koreanName: '강남',
     description:
-      'Sleek, modern, and business-driven. Big shopping, restaurants, nightlife, and beauty clinics. Wide boulevards and a polished, upscale feel.',
+      'The Gangnam in Gangnam-style. Sleek, modern, and business-driven — more of an office/worker district than a sightseeing spot. Not much to do here as a tourist, IMO.',
     lon: 127.0276,
     lat: 37.498,
   },
@@ -126,7 +130,7 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Gwanghwamun',
     koreanName: '광화문',
     description:
-      'The civic and historic heart of Seoul, anchored by Gyeongbokgung Palace and Gwanghwamun Square. Grand boulevards framed by mountains.',
+      'The civic and historic heart of Seoul, anchored by Gyeongbokgung Palace and Gwanghwamun Square.',
     lon: 126.9769,
     lat: 37.5725,
   },
@@ -155,7 +159,7 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Itaewon',
     koreanName: '이태원',
     description:
-      'The most international neighborhood in Seoul: diverse global food, bars, and crowds from all over the world. Lively, eclectic, and great for a night out.',
+      'The most international neighborhood in Seoul: diverse global food, bars, clubs. Lively, eclectic, and great for a night out.',
     lon: 126.9945,
     lat: 37.5345,
     nudgeX: 0,
@@ -188,7 +192,7 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Jamsil',
     koreanName: '잠실',
     description:
-      'Home to Lotte World, Lotte World Tower (the tallest building in Korea), Seokchon Lake, and big shopping malls. Family-friendly and great for views.',
+      'Home to Lotte World, Lotte World Tower (the tallest building in Korea), Seokchon Lake, and big shopping malls.',
     lon: 127.1,
     lat: 37.5133,
   },

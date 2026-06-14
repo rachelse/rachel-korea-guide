@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import Tips from './pages/Tips'
 import Food from './pages/Food'
 import Tour from './pages/Tour'
-import Cities from './pages/Cities'
 
 export default function App() {
   return (
@@ -14,7 +13,6 @@ export default function App() {
         <Route path="tips" element={<Tips />} />
         <Route path="food" element={<Food />} />
         <Route path="tour" element={<Tour />} />
-        <Route path="cities" element={<Cities />} />
       </Route>
     </Routes>
   )

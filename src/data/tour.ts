@@ -12,6 +12,7 @@ export const tourGroups: ContentGroup[] = [
   },
   {
     heading: 'Palaces',
+    intro: 'If you can get a ticket for a night viewing (야간개장), I highly recommend it. Tickets are competitive, but it\'s worth a shot.',
     items: [
       { title: 'Gyeongbokgung (경복궁)', body: 'The grand main palace. There\'s a changing of the guard ceremony.' },
       { title: 'Deoksugung (덕수궁)', body: 'Charming palace with a mix of Korean and Western architecture, lovely at dusk.' },
@@ -19,9 +20,13 @@ export const tourGroups: ContentGroup[] = [
     ],
   },
   {
-    heading: 'Hanok (traditional houses)',
+    heading: 'Hanok & fortress wall (한옥 & 성곽)',
     items: [
       { title: 'Bukchon Hanok Village (북촌한옥마을)', body: 'Historic hanok streets between the palaces. Please keep quiet — people live here.' },
+      {
+        title: 'Naksan Park (낙산공원)',
+        body: 'A hilltop park along the old Seoul City Wall (한양도성, Hanyangdoseong). An easy walk with great city views — especially beautiful at sunset and after dark when the wall is lit up.',
+      },
     ],
   },
   {
@@ -41,6 +46,8 @@ export const tourGroups: ContentGroup[] = [
     heading: 'Han River',
     intro: 'Han River ramen and delivery food by the water is a must-do local experience.',
     items: [
+      { title: 'Banpo Bridge (반포대교)', body: 'Famous for its rainbow fountain show at night.' },
+      { title: 'Ttukseom (뚝섬)', body: 'A lively riverside park (뚝섬한강공원). Easy to reach by subway.' },
       { title: 'Nodeul Island (노들섬)', body: 'A cultural island in the river — my favorite.' },
       { title: 'Seonyudo Park (선유도공원)', body: 'A peaceful park on a former water-treatment island.' },
     ],
@@ -57,7 +64,7 @@ export const tourGroups: ContentGroup[] = [
       { title: 'PC방 (PC bang)', body: 'Internet cafes packed with high-spec gaming PCs — a staple of Korean leisure. Cheap by the hour, and many serve fast food (ramyeon, fried snacks) right to your seat.' },
       {
         title: 'Dermatology clinics',
-        body: "Korea's new visitor record was partly driven by skincare and derma tourism. Ask me for details if you are interested.",
+        body: "Korea's new visitor record was partly driven by skincare and derma tourism. Ask me for details if you are interested😉",
       }, 
       { title: 'Korean medicine clinic (한의원)', body: 'Try traditional Korean medicine and acupuncture.' },
     ],
@@ -79,6 +86,11 @@ export const tourGroups: ContentGroup[] = [
         title: 'Beauty devices',
         body:
           'Home beauty/skincare devices are popular. You can get a big discount by buying from an online duty-free shop.',
+      },
+      {
+        title: 'Clothes shopping',
+        body:
+          'Korean fashion is affordable and on-trend. Musinsa (무신사) is the most popular platform for everyday basics and trendy brands, with offline stores in hot spots like Hongdae and Seongsu. Also, there are plenty more brands to explore.',
       },
     ],
   },

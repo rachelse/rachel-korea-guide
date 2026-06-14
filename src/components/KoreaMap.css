@@ -1,0 +1,219 @@
+.korea-map {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  background: #eef4fb;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(31, 64, 32, 0.12);
+  border: 1px solid var(--border);
+  /* Allow popups to extend beyond the map edges. */
+  overflow: visible;
+}
+
+.korea-map-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+/* ---------- Province shapes (background) ---------- */
+.province-shape {
+  fill: #dfe9d6;
+  stroke: #ffffff;
+  stroke-width: 1;
+  stroke-linejoin: round;
+}
+
+/* ---------- Pin overlay ---------- */
+.korea-map .pin-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.korea-map .map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.korea-map .pin-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 7px;
+  margin: -7px;
+  font-family: var(--font-body);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.korea-map .pin-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.korea-map .pin-button:focus-visible .pin-dot,
+.korea-map .map-pin.active .pin-dot {
+  background: var(--accent-dark);
+  transform: scale(1.35);
+}
+
+.korea-map .pin-label {
+  position: absolute;
+  top: calc(100% - 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1px 6px;
+  border-radius: 999px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+/* City labels stay visible by default so the map reads as a list of places,
+   then highlight on hover/focus. */
+.korea-map .pin-label {
+  opacity: 1;
+}
+
+.korea-map .pin-button:focus-visible .pin-label,
+.korea-map .map-pin.active .pin-label {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---------- Pin popup layer (sits above all pins) ---------- */
+.korea-map .pin-popup-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 35;
+}
+
+.korea-map .pin-popup-anchor {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.korea-map .pin-popup {
+  position: absolute;
+  width: 250px;
+  max-width: 72vw;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 10px 30px rgba(31, 64, 32, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  pointer-events: none;
+  z-index: 30;
+  text-align: left;
+}
+
+.korea-map .pin-popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.korea-map .pin-popup.above {
+  bottom: calc(100% + 8px);
+}
+
+.korea-map .pin-popup.below {
+  top: calc(100% + 8px);
+}
+
+.korea-map .pin-popup.center {
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+}
+
+.korea-map .pin-popup.center.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+.korea-map .pin-popup.left {
+  left: 0;
+}
+
+.korea-map .pin-popup.right {
+  right: 0;
+}
+
+.korea-map .popup-korean {
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin: 0 0 0.15rem;
+}
+
+.korea-map .popup-title {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+}
+
+.korea-map .popup-desc {
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.korea-map .popup-highlights {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted-ink);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.korea-map .popup-highlights li {
+  margin-bottom: 0.25rem;
+}
+
+.korea-map .popup-highlights strong {
+  color: var(--ink);
+}
+
+@media (max-width: 760px) {
+  .korea-map .pin-dot {
+    width: 15px;
+    height: 15px;
+  }
+
+  .korea-map .pin-button {
+    padding: 9px;
+    margin: -9px;
+  }
+
+  .korea-map .pin-label {
+    font-size: 0.6rem;
+    padding: 1px 4px;
+  }
+
+  .korea-map .pin-popup {
+    width: 210px;
+  }
+}

@@ -8,7 +8,16 @@ export default function NoteCard({ note }: Props) {
   return (
     <article className="note-card">
       <h3 className="note-title">{note.title}</h3>
-      {note.body && <p className="note-body">{note.body}</p>}
+      {note.body && (
+        <p className="note-body">
+          {note.body.split('\n').map((line, i) => (
+            <span key={i}>
+              {i > 0 && <br />}
+              {line}
+            </span>
+          ))}
+        </p>
+      )}
       {note.links && note.links.length > 0 && (
         <div className="note-links">
           {note.links.map((link) => (

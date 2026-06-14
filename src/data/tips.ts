@@ -2,48 +2,48 @@ import type { ContentNote } from './types'
 
 export const tips: ContentNote[] = [
   {
-    title: 'Avoid the subway during rush hour',
+    title: '🚇Avoid the subway during rush hour',
     body:
-      "Avoid taking the subway during commuting hours, especially Lines 9 and 2. On the other hand, if you want to witness Korea's extreme rush-hour commute firsthand, take Line 9 at Yeouido station ^ㅗ^ (sarcastic smile).",
+      "Avoid taking the subway during commuting hours, worst are Lines 9 and 2. On the other hand, if you want to witness Korea's extreme rush-hour commute, take Line 9 at Yeouido station ^ㅗ^ (sarcastic smile).",
   },
   {
-    title: 'Use the Catch Table app',
+    title: '🗺️Use Naver Map or Kakao Map, not Google Maps',
     body:
-      'A queue-management app. Many trendy and popular restaurants use it to manage their waiting lists — you can check your number and sometimes join the queue remotely. Always check if a popular restaurant is on the system before you go. There is no hidden gem in Seoul: Koreans are very sensitive to trends, so once a place is genuinely good it goes viral and gets crowded fast. With such a dense population, trendy areas are always packed and good restaurants almost always have a queue.',
+      'Locals use Naver Map or Kakao Map for navigation. Google Maps tends to surface only touristic recommendations and has limited walking/transit accuracy. That said, I know Google Maps is hard to avoid as a tourist, so check my Google Maps recommendations.',
   },
   {
-    title: 'Use Naver Map or Kakao Map, not Google Maps',
-    body:
-      'Locals use Naver Map or Kakao Map for navigation. Google Maps tends to surface only touristic recommendations and has limited walking/transit accuracy in Korea. That said, I know Google Maps is hard to avoid as a tourist, so I also saved some local spots to my Google Maps recommendations for you.',
-  },
-  {
-    title: 'Open run (오픈런)',
+    title: '🏃‍♂️Open run (오픈런)',
     body:
       'Konglish for queuing up early before a restaurant or cafe opens. Securing a seat at hyped spots is fiercely competitive — people often literally sprint for them.',
   },
   {
-    title: 'Restaurant & cafe etiquette',
+    title: '📱Use the Catch Table app',
     body:
-      'No tipping culture. Water is always provided for free. You can ask to refill side dishes (banchan). It is normal to save a seat by leaving your belongings (even phone or wallet) on the table — it is a safe society. Sharing food is common.',
+      'A queue-management app. Many trendy and popular restaurants use it to manage their waiting lists — you can check your number and sometimes join the queue remotely. Always check if a popular restaurant is on the system before you go. There are no hidden gems in Seoul: once a place is genuinely good, word spreads fast and the queues form. Trendy areas are always packed.',
   },
   {
-    title: 'Drinking culture: Bar vs Pocha',
+    title: '🍽️Restaurant & cafe etiquette',
     body:
-      'Korea has both modern cocktail bars and pocha (포차) — casual street-style pubs serving soju, beer, and comfort food. The pocha experience is more local and lively.',
+      'No tipping culture. Water is always provided for free. You can ask to refill side dishes (banchan). Sharing food is common.',
   },
   {
-    title: 'A very safe society',
+    title: '🍻Drinking culture: Bar vs Pocha',
     body:
-      'Crime rates are low and it is common to leave belongings unattended to hold a seat. Late-night convenience and safety are part of daily life.',
+      'There are pub-like bars, but it\'s more common to go to a 술집 (suljip) or 포차 (pocha) — casual spots serving soju, beer, and comfort food. Just keep in mind you almost always need to order food along with your drinks.',
   },
   {
-    title: 'Baemin (배민) food delivery',
+    title: '🛡️A very safe society',
     body:
-      'Baedal Minjok ("Baemin") is the dominant food delivery app. Delivery is fast and reaches almost anywhere — even to Han River parks.',
+      'Crime rates are low, and it is normal to save a seat by leaving your belongings — even a phone or wallet — on the table. Late-night convenience and safety are part of daily life.',
   },
   {
-    title: 'Are we threatened by North Korea?',
+    title: '🏍️Baemin (배민) food delivery',
     body:
-      'They sometimes provoke, but South Koreans generally don\'t feel fear. As a foreign friend once said after seeing Korea\'s huge fireworks festival: "I now believe Korea can defend against any attack." Korea has a long history of being invaded by surrounding countries, and its defense industry is one of the strongest in the world.',
+      'Baedal Minjok ("Baemin") is the dominant food delivery app. Delivery is fast and reaches almost anywhere even at late night.\nThe name 배달의 민족 (Baedal-ui Minjok) is a pun: 배달민족 is an old poetic name for the Korean people, while 배달 also means "delivery."',
+  },
+  {
+    title: '🇰🇵Are we threatened by North Korea?',
+    body:
+      'They sometimes provoke, but South Koreans generally don\'t feel fear. After watching Korea\'s huge fireworks festival (run by Hanwha, a defense company), a foreign friend of mine who has lived here for years said: "I now believe Korea can defend against any attack." Korea has a long history of fending off invasions, and its defense industry is one of the strongest in the world.',
   },
 ]

@@ -6,7 +6,6 @@ const links = [
   { to: '/tips', label: 'Tips' },
   { to: '/food', label: 'Food' },
   { to: '/tour', label: 'Tour' },
-  { to: '/cities', label: 'Other Cities' },
 ]
 
 export default function NavBar() {
