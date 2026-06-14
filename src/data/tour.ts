@@ -13,7 +13,7 @@ export const tourGroups: ContentGroup[] = [
   {
     heading: 'Palaces',
     items: [
-      { title: 'Gyeongbokgung (경복궁)', body: 'The grand main palace. Catch the changing of the guard ceremony.' },
+      { title: 'Gyeongbokgung (경복궁)', body: 'The grand main palace. There\'s a changing of the guard ceremony.' },
       { title: 'Deoksugung (덕수궁)', body: 'Charming palace with a mix of Korean and Western architecture, lovely at dusk.' },
       { title: 'Changdeokgung (창덕궁)', body: 'A UNESCO site famous for its Secret Garden (Huwon).' },
     ],
@@ -53,8 +53,8 @@ export const tourGroups: ContentGroup[] = [
         title: 'Jjimjilbang (찜질방)',
         body: 'Korean sauna with lots of entertainment (PC room, gaming, comic books). Eat sikhye (식혜) and roasted eggs with cider (Sprite).',
       },
-      { title: '노래방 (Noraebang)', body: 'Karaoke rooms, a must-try night out. Look for a 코인노래방 (coin karaoke): you pay per song (or a few songs for ₩1,000) instead of renting a whole room by the hour, so it is perfect for solo singers or a quick session with friends.' },
-      { title: 'PC방 (PC bang)', body: 'Internet cafes packed with high-spec gaming PCs — a staple of Korean leisure. Cheap by the hour, and many serve surprisingly good food (ramyeon, fried snacks) right to your seat.' },
+      { title: '노래방 (Noraebang)', body: 'Karaoke rooms, a must-try night out. Especially, in 코인노래방 (coin karaoke), you pay per song (or a few songs for ₩1,000) instead of renting a whole room by the hour, so it is perfect for solo singers or a quick session with friends.' },
+      { title: 'PC방 (PC bang)', body: 'Internet cafes packed with high-spec gaming PCs — a staple of Korean leisure. Cheap by the hour, and many serve fast food (ramyeon, fried snacks) right to your seat.' },
       {
         title: 'Dermatology clinics',
         body: "Korea's new visitor record was partly driven by skincare and derma tourism. Ask me for details if you are interested.",

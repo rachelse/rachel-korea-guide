@@ -47,9 +47,9 @@ export const mapLinks: MapLink[] = [
     url: 'https://maps.app.goo.gl/nCuBGVJcQH2czvKt6',
     note: 'Laptop-friendly cafes to work or study.',
   },
-  {
-    label: 'Local vacation tips',
-    url: 'https://maps.app.goo.gl/dADaH9MSt3Qfr9zt9',
-    note: "Beyond touristic spots — good if you're planning a long holiday or want to see local life.",
-  },
+  // {
+  //   label: 'Local vacation tips',
+  //   url: 'https://maps.app.goo.gl/dADaH9MSt3Qfr9zt9',
+  //   note: "Beyond touristic spots — good if you're planning a long holiday or want to see local life.",
+  // },
 ]
