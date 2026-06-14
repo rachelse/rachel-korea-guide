@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { guDistricts, GU_VIEWBOX, projectLonLat } from '../data/seoulGu'
 import { guInfo } from '../data/guInfo'
 import { neighborhoods } from '../data/neighborhoods'
@@ -31,6 +31,23 @@ function shortEng(nameEng: string): string {
 export default function SeoulMap() {
   const [activeId, setActiveId] = useState<string | null>(null)
   const [activeGu, setActiveGu] = useState<string | null>(null)
+  // Tracks whether the last interaction came from touch, so we can ignore the
+  // synthetic mouseenter/leave events a tap fires (which otherwise immediately
+  // open then close the popup on phones).
+  const isTouch = useRef(false)
+
+  // On touch devices, close the open pin popup when tapping anywhere that isn't
+  // a pin, so a tapped popup stays visible until dismissed.
+  useEffect(() => {
+    function handlePointerDown(e: PointerEvent) {
+      if (e.pointerType !== 'touch') return
+      const target = e.target as Element | null
+      if (target && target.closest('.map-pin')) return
+      setActiveId(null)
+    }
+    document.addEventListener('pointerdown', handlePointerDown)
+    return () => document.removeEventListener('pointerdown', handlePointerDown)
+  }, [])
 
   return (
     <div className="seoul-map" role="group" aria-label="Map of Seoul districts with recommended areas">
@@ -96,13 +113,28 @@ export default function SeoulMap() {
               key={p.id}
               className={`map-pin ${isActive ? 'active' : ''}`}
               style={{ left: `${p.xPct}%`, top: `${p.yPct}%` }}
-              onMouseEnter={() => setActiveId(p.id)}
-              onMouseLeave={() => setActiveId((cur) => (cur === p.id ? null : cur))}
+              onMouseEnter={() => {
+                if (isTouch.current) return
+                setActiveId(p.id)
+              }}
+              onMouseLeave={() => {
+                if (isTouch.current) return
+                setActiveId((cur) => (cur === p.id ? null : cur))
+              }}
             >
               <button
                 className="pin-button"
-                onFocus={() => setActiveId(p.id)}
-                onBlur={() => setActiveId((cur) => (cur === p.id ? null : cur))}
+                onPointerDown={(e) => {
+                  isTouch.current = e.pointerType === 'touch'
+                }}
+                onFocus={() => {
+                  if (isTouch.current) return
+                  setActiveId(p.id)
+                }}
+                onBlur={() => {
+                  if (isTouch.current) return
+                  setActiveId((cur) => (cur === p.id ? null : cur))
+                }}
                 onClick={() => setActiveId((cur) => (cur === p.id ? null : p.id))}
                 aria-expanded={isActive}
                 aria-label={`${p.name} (${p.koreanName})`}
