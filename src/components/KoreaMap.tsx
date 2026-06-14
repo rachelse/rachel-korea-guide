@@ -3,6 +3,38 @@ import { koreaProvinces, KOREA_VIEWBOX, projectKorea } from '../data/koreaProvin
 import { cities } from '../data/cities'
 import './KoreaMap.css'
 
+// Short, readable labels for the province polygons (the source names are long
+// and include administrative suffixes like "-do" / "si").
+const PROVINCE_LABELS: Record<string, string> = {
+  Seoul: 'Seoul',
+  Busan: 'Busan',
+  Daegu: 'Daegu',
+  Incheon: 'Incheon',
+  Gwangju: 'Gwangju',
+  Daejeon: 'Daejeon',
+  Ulsan: 'Ulsan',
+  Sejongsi: 'Sejong',
+  'Gyeonggi-do': 'Gyeonggi',
+  'Gangwon-do': 'Gangwon',
+  'Chungcheongbuk-do': 'Chungbuk',
+  'Chungcheongnam-do': 'Chungnam',
+  'Jeollabuk-do': 'Jeonbuk',
+  'Jeollanam-do': 'Jeonnam',
+  'Gyeongsangbuk-do': 'Gyeongbuk',
+  'Gyeongsangnam-do': 'Gyeongnam',
+  'Jeju-do': 'Jeju',
+}
+
+// Manual label position overrides (SVG coords) for provinces whose geometric
+// centroid sits awkwardly — e.g. Gyeonggi wraps around Seoul, so its centroid
+// lands right on top of the Seoul label.
+const LABEL_OVERRIDES: Record<string, { x: number; y: number }> = {
+  'Gyeonggi-do': { x: 250, y: 170 },  
+  'Gyeongsangbuk-do': { x: 453, y: 430 },
+  'Chungcheongbuk-do': { x: 310, y: 345 },
+  'Chungcheongnam-do': { x: 190, y: 360 },
+  'Jeollabuk-do': { x: 242, y: 470 },}
+
 // Pre-compute city pin positions as percentages of the map box so they can be
 // overlaid as HTML (for rich hover popups) on top of the responsive SVG.
 const pins = cities
@@ -45,6 +77,14 @@ export default function KoreaMap() {
         {koreaProvinces.map((p) => (
           <path key={p.code} d={p.path} className="province-shape" />
         ))}
+        {koreaProvinces.map((p) => {
+          const pos = LABEL_OVERRIDES[p.nameEng] ?? { x: p.cx, y: p.cy }
+          return (
+            <text key={`${p.code}-label`} x={pos.x} y={pos.y} className="province-label">
+              {PROVINCE_LABELS[p.nameEng] ?? p.nameEng}
+            </text>
+          )
+        })}
       </svg>
 
       {/* City pins overlaid on the map */}
