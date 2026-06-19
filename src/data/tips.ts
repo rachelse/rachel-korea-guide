@@ -12,14 +12,14 @@ export const tips: ContentNote[] = [
       'Locals use Naver Map or Kakao Map for navigation. Google Maps tends to surface only touristic recommendations and has limited walking/transit accuracy. That said, I know Google Maps is hard to avoid as a tourist, so check my Google Maps recommendations.',
   },
   {
-    title: '🏃‍♂️Open run (오픈런)',
-    body:
-      'Konglish for queuing up early before a restaurant or cafe opens. Securing a seat at hyped spots is fiercely competitive — people often literally sprint for them.',
-  },
-  {
     title: '📱Use the Catch Table app',
     body:
       'A queue-management app. Many trendy and popular restaurants use it to manage their waiting lists — you can check your number and sometimes join the queue remotely. Always check if a popular restaurant is on the system before you go. There are no hidden gems in Seoul: once a place is genuinely good, word spreads fast and the queues form. Trendy areas are always packed.',
+  },
+  {
+    title: '🏃‍♂️Open run (오픈런)',
+    body:
+      'Konglish for queuing up early before a restaurant or cafe opens. Securing a seat at hyped spots is fiercely competitive — people often literally sprint for them.',
   },
   {
     title: '🍽️Restaurant & cafe etiquette',
