@@ -47,6 +47,11 @@ export const mapLinks: MapLink[] = [
     url: 'https://maps.app.goo.gl/nCuBGVJcQH2czvKt6',
     note: 'Laptop-friendly cafes to work or study.',
   },
+  {
+    label: 'Vegan',
+    url: 'https://maps.app.goo.gl/nDUkhEGDdVYzp4zS9',
+    note: 'Vegan and vegetarian-friendly spots around Korea.',
+  },
   // {
   //   label: 'Local vacation tips',
   //   url: 'https://maps.app.goo.gl/dADaH9MSt3Qfr9zt9',

@@ -26,7 +26,7 @@ export const neighborhoods: Neighborhood[] = [
     name: 'Hongdae',
     koreanName: '홍대',
     description:
-      'Youthful and energetic, centered on Hongik University. Packed with indie cafes, live music, street performances, and clubs. Crowded but iconic.',
+      'Youthful and energetic, centered on Hongik University. Packed with indie cafes, live music, street performances, and clubs. Crowded but iconic. (+ Japanese subculture — anime, cosplay, themed shops and cafes).',
     lon: 126.9233,
     lat: 37.5563,
     nudgeX: 1.5,

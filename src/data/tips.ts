@@ -34,12 +34,27 @@ export const tips: ContentNote[] = [
   {
     title: '🛡️A very safe society',
     body:
-      'Crime rates are low, and it is normal to save a seat by leaving your belongings — even a phone or wallet — on the table. Late-night convenience and safety are part of daily life.',
+      'Crime rates are low, and it is normal to save a seat by leaving your belongings — even a phone or wallet — on the table.\nLate-night convenience and safety are part of daily life.\nCouriers also simply leave packages at your front door, and they sit there safely until you pick them up.',
   },
   {
     title: '🏍️Baemin (배민) food delivery',
     body:
       'Baedal Minjok ("Baemin") is the dominant food delivery app. Delivery is fast and reaches almost anywhere even at late night.\nThe name 배달의 민족 (Baedal-ui Minjok) is a pun: 배달민족 is an old poetic name for the Korean people, while 배달 also means "delivery."',
+  },
+  {
+    title: '🚩Saturday demonstrations around 시청–광화문',
+    body:
+      'On Saturdays you\'ll often run into large political rallies around 시청 (City Hall) and 광화문 (Gwanghwamun). They can be loud and block traffic, so they\'re irritating, but watching them is also kind of hilarious (you may even hear chants like "Yoon again"). If you want an easy trip, it\'s best to avoid the area on Saturdays.',
+  },
+  {
+    title: '🌱Vegan & vegetarian dining',
+    body:
+      "NGL,, vegan and vegetarian options can be hard to find here, since meat and fish sauces are common even in dishes that look plant-based. I'm not a vegan myself, so I'm no expert — but some vegan-friendly spots on the maps below.",
+    links: [
+      { label: 'HappyCow app', url: 'https://www.happycow.net/mobile' },
+      { label: 'Vegan map (Kakao)', url: 'https://kko.to/rkCH6kus4-' },
+      { label: 'Visit Seoul vegan list', url: 'https://english.visitseoul.net/restaurants?srchType=&srchOptnCode=&srchCtgry=117&sortOrder=&srchWord=&radioOptionLike=TURSM_AREA_8' },
+    ],
   },
   {
     title: '🇰🇵Are we threatened by North Korea?',
